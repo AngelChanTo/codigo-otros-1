@@ -3,6 +3,10 @@
 
 
 /* Variables */
+
+/*en esta seccion se establecen las variables y se les asigna un valor para su uso en la estructura del html,
+desde el tamaño de la fuente, asignarle a grey a la variable grey, el tamaño de la fuente, la familia de la fuente,
+y el box sizing*/
 html {
   --grey: #e7e7e7;
   --gray: var(--grey);
@@ -19,10 +23,17 @@ html {
   box-sizing: border-box;
 }
 
+/*esto afecta a todos los elementos del html y los pseudoelementos before y after con ayuda de los :, y se establece
+la propiedad box sizing en inherit, esto es que el elemento debe heredar los valores establecidos en box sizing del
+elemento padre más cercano*/
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
+/*se establecen las propiedades del body, se establece el tamaño de la fuente dentro del elemento body
+con 2 veces el tamaño de la fuente root, altura de linea del texto, el color de fondo del elemento, y la imagen de fondo
+y su tamaño, el ancho de cada repeticion es de 15 pixeles */
 body {
   font-size: 2rem;
   line-height: 1.5;
@@ -33,6 +44,11 @@ body {
 
 
 /* Table Styles */
+/*establecemos los estilos de la tabla con bordes redondeados, el overflow establece el comportamiento del contenido
+como escondido en caso de desbordarse, se establece el tamaño del margen inferior y el colapso de los bordes para la tabla
+los bordes que son adyacentes de las celdas se fusionan en una linea
+*/
+
 
 table {
   border-radius: 5px;
@@ -41,6 +57,9 @@ table {
   border-collapse: collapse;
 }
 
+
+/*establecemos los valores de las celdas de datos y encabezados de tabla, estableciendose el borde y el padding relativo
+al tamaño del root*/
 td, th {
   border: 1px solid var(--grey);
   padding: 0.5rem;
@@ -48,7 +67,8 @@ td, th {
 
 
 /* Helper Divs */
-
+/*se establecen los estilos para la clase wrapper  con un maximo de 1000 poxeles, margin, padding y un background blanco
+*/
 .wrapper {
   max-width: 1000px;
   margin: 4rem auto;
@@ -64,7 +84,7 @@ a {
   text-decoration-color: var(--yellow);
 }
 
-
+/*estilos del boton*/
 a.button, button, input[type="button"] {
   color: white;
   background: var(--pink);
@@ -76,6 +96,7 @@ a.button, button, input[type="button"] {
   font-size:2rem;
 }
 
+/*estilos del pseudoelemento focos*/
 :focus {
   outline-color: var(--pink);
 }
@@ -93,7 +114,7 @@ input:not([type="checkbox"]):not([type="radio"]), textarea, select {
 .success {
   border: 1px solid red;
 }
-
+/*estilos de los headers*/
 h1,
 h2,
 h3,
